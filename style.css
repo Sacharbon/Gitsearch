@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* utilise une taille de police de base de 10px */
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f6f8ff;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
+}
+  
+.container {
+    width: 90%;
+    max-width: 730px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+  
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+  
+.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #697C9A;
+    cursor: pointer;
+}
+
+.theme h4 {
+    letter-spacing: 2.5px;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;;
+    line-height: 1.9;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    background-color: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 3.6rem;
+}
+
+.search input {
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5;
+    font-family: 'Space Mono';
+    color:#4B6A9B;
+    width: 100%;
+}
+
+.search input:focus {
+    outline:none;
+}
+
+.search svg {
+    width: 4rem;
+    height: 2.5rem;;
+    margin-left: 32px;
+}
+
+.search button {
+    padding: 13px 23px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: #0079FF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #60ABFF;
+}
+
+
+.main {
+    background-color: #FEFEFE;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 24px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+}
+
+.profile {
+    display: flex;
+    padding: 50px;
+    gap: 36px;
+}
+
+.profile h1 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #2B3442;
+}
+
+.profile img {
+    width: 117px;
+    height: 117px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.pseudo h3 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0079FF;
+    padding-top: 2px;
+}
+
+.top span {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    color: #697C9A;
+}
+
+.desc p {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #4B6A9B;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    margin-top: 20px;
+}
+
+.section {
+    background-color: #F6F8FF;
+    width: 480px;
+    height: 85px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 37px;
+}
+
+.section .repos {
+    padding-left: 32px;
+}
+
+.section .following {
+    padding-right: 83px;
+}
+
+.section h4 {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4B6A9B;
+}
+
+.infos  {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #4B6A9B;
+}
+
+.twitter {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.compagny {
+    padding-top: 20px;
+}
+
+.link {
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.point {
+    display: flex;
+    gap: 15px;
+}
