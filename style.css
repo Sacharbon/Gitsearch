@@ -6,21 +6,15 @@
 }
 
 html {
-    font-size: 62.5%; /* utilise une taille de police de base de 10px */
-    }
+    font-size: 62.5%;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f6f8ff;
     font-family: 'Space Mono', monospace;
-    font-size: 1.6rem;
+    margin-top: 20px;
 }
-  
+
 .container {
     width: 90%;
     max-width: 730px;
@@ -67,8 +61,7 @@ h4 {
     background-color: #FEFEFE;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     border-radius: 1.5rem;
-    padding: 1.5rem;
-    margin-top: 3.6rem;
+    margin: 3.6rem 0 0 0;
 }
 
 .search input {
@@ -80,6 +73,7 @@ h4 {
     font-family: 'Space Mono';
     color:#4B6A9B;
     width: 100%;
+    padding: 1.5rem;
 }
 
 .search input:focus {
@@ -104,6 +98,7 @@ h4 {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .search button:hover {
@@ -113,7 +108,6 @@ h4 {
 
 .main {
     background-color: #FEFEFE;
-    padding: 0 10px;
     width: 100%;
     margin-top: 24px;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -191,11 +185,11 @@ h4 {
 }
 
 .section .repos {
-    padding-left: 32px;
+    margin-left: 32px;
 }
 
 .section .following {
-    padding-right: 83px;
+    margin-right: 83px;
 }
 
 .section h4 {
@@ -224,19 +218,158 @@ h4 {
 }
 
 .compagny {
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .link {
-    padding-top: 20px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
-.link:hover {
+.link p:hover {
     text-decoration: underline;
 }
 
 .point {
     display: flex;
     gap: 15px;
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 90%;
+        /* max-width: 730px;  */
+        width: 327px;
+        height: 517px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search input {
+        height: 25px;
+        left: 13.76%;
+        right: 29.97%;
+        top: calc(50% - 25px/2 + 0.5px);
+
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .search svg {
+        margin-left: 16px;
+    }
+
+    .profile {
+        display: flex;
+        padding-left: 24px;
+        padding-top: 32px;
+        gap: 19px;
+    }
+    
+    .profile h1 {
+        height: 24px;
+        left: 0.35%;
+        right: 24.65%;
+        top: calc(50% - 24px/2 - 22.5px);
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .profile img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .top {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .pseudo h3 {
+        height: 19px;
+        left: 0%;
+        right: 55.56%;
+        top: calc(50% - 19px/2 - 1px);
+        
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+    }
+    
+    .top span {
+        height: 19px;
+        left: 0%;
+        right: 0%;
+        top: calc(50% - 19px/2 + 24px);
+        
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+        padding-top: 6px;
+    }
+
+    .desc p {
+        height: 75px;
+        left: 7.34%;
+        right: 7.34%;
+        top: calc(50% - 75px/2 - 86px);
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 25px;
+        margin-left: -90px;
+        margin-top: 30px;
+    }
+    .section {
+        width: 279px;
+        margin-top: 70px;
+        margin-left: -90px;
+        text-align: center;
+    }
+
+    .section .repos {
+        margin-left: 15px;
+    }
+    
+    .section .following {
+        margin-right: 15px;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        margin-left: -90px;
+        margin-top: 24px; 
+        left: 0%;
+        right: 0%;
+        top: calc(50% - 16px/2 - 16px);
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .link {
+        margin-top: 16px;
+    }
+    .compagny {
+        margin-top: 16px;
+
+    }
+    .twitter {
+        margin-top: 16px;
+
+    }
 }
