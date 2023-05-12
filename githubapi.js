@@ -29,10 +29,12 @@ search.addEventListener('click', () => {
     }
 })
 
+// place l'emplacement où le contenu sera écrit
+
 function showUser(user) {
     const name = document.querySelector('#name')
     const username = document.querySelector('#username')
-    const date = document.querySelector('#date')
+    const create = document.querySelector('#date')
     const desc = document.querySelector('#desc')
     const repos = document.querySelector('#repos')
     const followers = document.querySelector('#followers')
@@ -43,11 +45,20 @@ function showUser(user) {
     const link = document.querySelector('#link')
     const picture = document.querySelector('#picture')
 
+
+// écriture du contenu
+
     name.innerHTML = user.name
 
     username.innerHTML = `@${user.login}`
     
-    date.innerHTML = `joined ${user.created_at}`
+    let dateString = user.created_at;
+    let date = new Date(dateString);
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
+    let formattedDate = date.toLocaleDateString(undefined, options);
+    create.innerHTML = `joined ${formattedDate}`
+
+
 
     desc.innerHTML = user.bio
     if(user.bio == null){
@@ -63,21 +74,25 @@ function showUser(user) {
     twitter.innerHTML = user.twitter_username
     if(user.twitter_username == null){
         twitter.innerHTML = "Not Available"
+        document.getElementById("twitterDiv").classList.add("low-opacity");
     }
 
     compagny.innerHTML = user.compagny
     if(user.compagny == null){
         compagny.innerHTML = "Not Available"
+        document.getElementById("compagnyDiv").classList.add("low-opacity");
     }
 
     link.innerHTML = user.blog
-    if(user.blog == null){
+    if(user.blog == ""){
         link.innerHTML = "Not Available"
+        document.getElementById("linkDiv").classList.add("low-opacity");
     }
 
     location.innerHTML = user.location
     if(user.location == null){
         location.innerHTML = "Not Available"
+        document.getElementById("locationDiv").classList.add("low-opacity");
     }
 
     picture.innerHTML = user.avatar_url

@@ -225,7 +225,6 @@ h4 {
 
 .twitter {
     mix-blend-mode: normal;
-    opacity: 0.5;
 }
 
 .compagny {
@@ -418,9 +417,7 @@ h4 {
     p {
         color: white;
     }
-    .infos {
-        color: white;
-    }
+
 
 }
 @media (prefers-color-scheme: light){
@@ -429,3 +426,7 @@ h4 {
         color: #000000;
     }
 }
+
+.low-opacity {
+    opacity: 0.5;
+  }
