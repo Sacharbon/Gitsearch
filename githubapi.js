@@ -5,9 +5,24 @@
 const search = document.querySelector('#searchbtn')
 const error = document.querySelector('#error')
 
-search.addEventListener('click', () => {
+// Afficher Octocat au chargement de la page
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://api.github.com/users/octocat')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        showUser(data)
+    })
+});
+
+
 
 // 1. Récupérer contenu input
+
+search.addEventListener('click', () => {
+
     const content = document.querySelector('#usernameInput').value
     if(content == "") {
         error.innerHTML = "No results"
